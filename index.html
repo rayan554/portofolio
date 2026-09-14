@@ -503,9 +503,11 @@
                 if (lastFocused) lastFocused.focus();
             }
             track.addEventListener('click', (e) => {
-                const card = e.target.closest('.project-card');
-                if (card && card.getAttribute('tabindex') !== '-1') openCase(card.dataset.id, card);
-            });
+    const card = e.target.closest('.project-card');
+    if (card) {
+        openCase(card.dataset.id, card);
+    }
+});
             track.addEventListener('keydown', (e) => {
                 if (e.key === 'Enter') {
                     const card = e.target.closest('.project-card');
@@ -569,7 +571,7 @@
                     if (!isDragging) return;
                     e.preventDefault();
                     const dx = e.pageX - startX;
-                    if (Math.abs(dx) > 3) hasMoved = true;
+                    if (Math.abs(dx) > 15) hasMoved = true;
                     scroller.scrollLeft = startScrollLeft - dx;
                 });
                 window.addEventListener('mouseup', () => {
