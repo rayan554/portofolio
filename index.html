@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Arrayan — Graphic Designer & Visual Artist</title>
+
+    <!-- ===== SEO & SOCIAL SHARING (ganti URL & gambar dengan milikmu) ===== -->
+    <meta name="description" content="Muhammad Arrayan — Graphic Designer & Visual Artist berbasis di Bekasi. Spesialis brand identity, poster art, typography, editorial, dan motion graphics. Komisi terbuka.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Muhammad Arrayan — Graphic Designer & Visual Artist">
+    <meta property="og:description" content="High-impact brand identities, expressive poster art, motion graphics, and typography systems. Bekasi, ID.">
+    <meta property="og:image" content="images/og-cover.jpg"><!-- ganti dengan URL gambar cover karyamu -->
+    <meta name="theme-color" content="#08080a">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2308080a'/%3E%3Crect x='8' y='8' width='16' height='16' fill='%23a3e635'/%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    animation: {
+                        'marquee': 'marquee 25s linear infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            transition: background-color 1s ease-in-out;
+            background-color: #08080a;
+        }
+        /* Anchor tidak tertutup header fixed */
+        section[id] { scroll-margin-top: 90px; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="min-h-screen text-zinc-300 font-sans border-x border-zinc-900 max-w-[1600px] mx-auto overflow-x-hidden antialiased selection:bg-lime-400 selection:text-black relative">
+
+    <!-- Noise -->
+    <div class="fixed inset-0 opacity-[0.04] pointer-events-none mix-blend-overlay z-0" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
+
+    <!-- HEADER -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 max-w-[1600px] mx-auto z-50 bg-[#08080a] border-b border-zinc-900 transition-all duration-300">
+        <div class="px-6 md:px-12 py-5 flex justify-between items-center">
+            <a href="#home" class="font-display text-2xl font-bold tracking-tight text-white flex items-center gap-2 uppercase">
+                <span class="w-3 h-3 bg-lime-400 rounded-none animate-pulse"></span>
+                <span>ARRAYAN</span>
+                <span class="text-[10px] font-mono text-zinc-500 uppercase tracking-widest ml-2 border border-zinc-800 px-2 py-1 hidden sm:inline">[ STUDIO ]</span>
+            </a>
+
+            <nav class="hidden md:flex gap-8 text-xs font-mono uppercase tracking-widest text-zinc-400">
+                <a href="#about" class="nav-link hover:text-lime-400 transition-colors" data-target="about">/ 01. About</a>
+                <a href="#projects" class="nav-link hover:text-lime-400 transition-colors" data-target="projects">/ 02. Showcase</a>
+                <a href="#skills" class="nav-link hover:text-lime-400 transition-colors" data-target="skills">/ 03. Toolkit</a>
+                <a href="#contact" class="nav-link hover:text-lime-400 transition-colors" data-target="contact">/ 04. Contact</a>
+            </nav>
+
+            <a href="#contact" class="hidden md:inline-flex text-xs font-mono uppercase tracking-widest px-6 py-3 border border-zinc-500 bg-white text-black hover:bg-lime-400 hover:border-lime-400 transition-all font-bold rounded-full">
+                Hire Artist
+            </a>
+
+            <button id="menu-btn" class="md:hidden text-zinc-300 focus:outline-none" aria-label="Buka menu" aria-expanded="false">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="icon-open" stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+                    <path id="icon-close" class="hidden" stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <nav id="mobile-menu" class="hidden md:hidden bg-[#0c0c0e] border-b border-zinc-800 py-6 px-6 flex flex-col gap-6 font-mono text-sm uppercase tracking-widest">
+            <a href="#about" class="mobile-link text-zinc-300 hover:text-lime-400 border-b border-zinc-800 pb-2">/ 01. About</a>
+            <a href="#projects" class="mobile-link text-zinc-300 hover:text-lime-400 border-b border-zinc-800 pb-2">/ 02. Showcase</a>
+            <a href="#skills" class="mobile-link text-zinc-300 hover:text-lime-400 border-b border-zinc-800 pb-2">/ 03. Toolkit</a>
+            <a href="#contact" class="mobile-link text-zinc-300 hover:text-lime-400 pb-2">/ 04. Contact</a>
+        </nav>
+    </header>
+
+    <main class="pt-24 relative z-10">
+        <!-- HERO -->
+        <section id="home" data-bg="#08080a" class="scroll-section min-h-[85vh] flex flex-col justify-between px-6 md:px-12 py-12 border-b border-zinc-900 relative">
+            <div class="space-y-6 max-w-6xl mt-8">
+                <div class="inline-flex items-center gap-2 px-4 py-2 border border-zinc-800 bg-black text-xs font-mono text-zinc-400 uppercase tracking-widest rounded-none">
+                    <span class="w-2 h-2 rounded-none bg-lime-400"></span>
+                    Bekasi, ID &bull; Freelance Commissions Open
+                </div>
+
+                <h1 class="font-display text-6xl sm:text-8xl lg:text-[11rem] font-black text-white tracking-tighter leading-[0.9] uppercase">
+                    Graphic <br />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-500 to-zinc-700">Designer</span> &
+                    <span class="text-lime-400 italic font-serif tracking-normal normal-case">Artist.</span>
+                </h1>
+            </div>
+
+            <div class="grid md:grid-cols-12 gap-8 items-end mt-16 pt-8 border-t border-zinc-900">
+                <div class="md:col-span-7">
+                    <p class="text-xl md:text-2xl text-zinc-400 leading-snug font-light max-w-2xl">
+                        Hey, I&rsquo;m <strong class="text-white font-medium">Muhammad Arrayan</strong>. I build high-impact brand identities, expressive poster art, motion graphics, and typography systems designed to command attention.
+                    </p>
+                </div>
+                <div class="md:col-span-5 flex flex-wrap justify-start md:justify-end gap-4">
+                    <a href="#projects" class="magnetic px-8 py-5 bg-white text-black font-mono text-xs font-bold uppercase tracking-widest rounded-full hover:bg-lime-400 transition-all flex items-center gap-3">
+                        <span>View Selected Works</span>
+                        <span>&darr;</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- MARQUEE BANNER -->
+        <div class="py-6 border-b border-zinc-900 bg-black overflow-hidden whitespace-nowrap" aria-hidden="true">
+            <div class="inline-flex animate-marquee gap-8 font-mono text-sm text-zinc-300 tracking-[0.2em] uppercase font-bold">
+                <span>&#10022; Brand Identity</span>
+                <span>&#10022; Poster Design</span>
+                <span>&#10022; Typography</span>
+                <span>&#10022; Video Editing </span>
+                <span>&#10022; Editorial &amp; Layout</span>
+                <span>&#10022; Chinematography</span>
+                <span>&#10022; Visual Direction</span>
+                <span>&#10022; Social Media Identity</span>
+                <span>&#10022; Visual Identity</span>
+                <span>&#10022; Typography</span>
+                <span>&#10022; Poster Designer</span>
+                <span>&#10022; Editorial &amp; Layout</span>
+                <span>&#10022; 3D Artworks</span>
+                <span>&#10022; Visual Direction</span>
+            </div>
+        </div>
+
+        <!-- ABOUT -->
+        <section id="about" data-bg="#121110" class="scroll-section py-32 px-6 md:px-12 border-b border-zinc-900">
+            <div class="grid lg:grid-cols-12 gap-16 items-start">
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="font-mono text-xs text-lime-400 uppercase tracking-widest block border-b border-zinc-800 pb-4">[ 01 &mdash; About My Studio ]</span>
+                    <h2 class="font-display text-4xl md:text-6xl font-bold text-white uppercase tracking-tight leading-none">Concept <br> Over Clutter.</h2>
+                </div>
+
+                <div class="lg:col-span-7 space-y-10 text-zinc-300 text-xl leading-relaxed font-light">
+                    <p class="border-l-2 border-lime-400 pl-6">
+                        Design should be bold, intentional, and memorable. My work sits at the intersection of modern minimalism and raw expressive graphics. I help creative brands and artists turn complex ideas into sharp visual assets.
+                    </p>
+                    <p class="pl-6">
+                        From typography systems and editorial design to album artwork and full brand suites, every project is executed with visual precision.
+                    </p>
+
+                    <div class="pt-8 grid grid-cols-2 sm:grid-cols-3 gap-8 font-mono text-xs border-t border-zinc-900">
+                        <div>
+                            <span class="text-zinc-500 block mb-2 uppercase tracking-widest">Location</span>
+                            <span class="text-white font-bold text-sm">Indonesia (UTC+7)</span>
+                        </div>
+                        <div>
+                            <span class="text-zinc-500 block mb-2 uppercase tracking-widest">Experience</span>
+                            <span class="text-white font-bold text-sm">2+ Years of Experience</span>
+                        </div>
+                        <div>
+                            <span class="text-zinc-500 block mb-2 uppercase tracking-widest">Focus</span>
+                            <span class="text-white font-bold text-sm">Branding &amp; Print</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS — AUTO + MANUAL SCROLL -->
+        <section id="projects" data-bg="#131612" class="scroll-section py-32 border-b border-zinc-900 overflow-hidden">
+            <div class="px-6 md:px-12 mb-16 flex flex-col md:flex-row justify-between items-end gap-6">
+                <div class="w-full">
+                    <span class="font-mono text-xs text-lime-400 uppercase tracking-widest block border-b border-zinc-800 pb-4 mb-6">[ 02 &mdash; Work Showcase ]</span>
+                    <h2 class="font-display text-5xl md:text-7xl font-bold text-white uppercase tracking-tight">Selected Projects</h2>
+                </div>
+            </div>
+
+            <div id="projectsScroller" class="relative w-full flex bg-black/40 border-y border-zinc-900 overflow-x-auto no-scrollbar cursor-grab active:cursor-grabbing select-none" style="-webkit-overflow-scrolling: touch; touch-action: pan-x;">
+                <div id="projectsTrack" class="flex w-max"><!-- kartu diisi oleh JS dari data PROJECTS (grup 1 + duplikat grup 2 untuk seamless loop) --></div>
+            </div>
+        </section>
+        <!-- SKILLS -->
+        <section id="skills" data-bg="#0c0c12" class="scroll-section py-32 px-6 md:px-12 border-b border-zinc-900">
+            <div class="space-y-6 mb-16">
+                <span class="font-mono text-xs text-lime-400 uppercase tracking-widest block border-b border-zinc-800 pb-4">[ 03 &mdash; Capabilities ]</span>
+                <h2 class="font-display text-5xl md:text-7xl font-bold text-white uppercase tracking-tight">Toolkit &amp; Expertise</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-0 border border-zinc-900 bg-black">
+                <div class="p-10 border-b md:border-b-0 md:border-r border-zinc-900 space-y-8 hover:bg-zinc-900/50 transition-colors">
+                    <span class="font-mono text-xs text-zinc-500 border border-zinc-800 px-3 py-1 block w-max">01 / Capability</span>
+                    <h3 class="font-display text-3xl font-bold text-white uppercase">Visual Design</h3>
+                    <ul class="space-y-4 font-mono text-sm text-zinc-400">
+                        <li class="border-b border-zinc-900 pb-2">&rarr; Poster &amp; Key Visual Art</li>
+                        <li class="border-b border-zinc-900 pb-2">&rarr; Packaging &amp; Apparel Art</li>
+                    </ul>
+                </div>
+                <div class="p-10 border-b md:border-b-0 md:border-r border-zinc-900 space-y-8 hover:bg-zinc-900/50 transition-colors">
+                    <span class="font-mono text-xs text-zinc-500 border border-zinc-800 px-3 py-1 block w-max">02 / Capability</span>
+                    <h3 class="font-display text-3xl font-bold text-white uppercase">Software Tools</h3>
+                    <ul class="space-y-4 font-mono text-sm text-zinc-400">
+                        <li class="border-b border-zinc-900 pb-2">&rarr; Canva</li>
+                        <li class="border-b border-zinc-900 pb-2">&rarr; Adobe Lightroom</li>
+                        <li class="border-b border-zinc-900 pb-2">&rarr; Snapsheed</li>
+                        <li class="border-b border-zinc-900 pb-2">&rarr; CapCut</li>
+                    </ul>
+                </div>
+                <div class="p-10 space-y-8 hover:bg-zinc-900/50 transition-colors">
+                    <span class="font-mono text-xs text-zinc-500 border border-zinc-800 px-3 py-1 block w-max">03 / Capability</span>
+                    <h3 class="font-display text-3xl font-bold text-white uppercase">‎SOCIAL MEDIA VIDEO EDITING</h3>
+                    <ul class="space-y-4 font-mono text-sm text-zinc-400">
+                        <li class="border-b border-zinc-900 pb-2">&rarr; Cinematic Formatting</li>
+                        <li class="border-b border-zinc-900 pb-2">&rarr; Audio & Video Synchronization</li>
+                        <li class="border-b border-zinc-900 pb-2">&rarr; Subtitling</li>
+                        <li class="border-b border-zinc-900 pb-2">&rarr; Creative Layouting</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" data-bg="#08080a" class="scroll-section py-32 px-6 md:px-12">
+            <div class="max-w-4xl mx-auto space-y-16">
+                <div class="text-center space-y-6">
+                    <span class="font-mono text-xs text-lime-400 uppercase tracking-widest border-b border-zinc-800 pb-2">[ 04 &mdash; Get In Touch ]</span>
+                    <h2 class="font-display text-6xl md:text-8xl font-black text-white uppercase tracking-tighter">Let&rsquo;s Build <br><span class="italic text-zinc-500 font-serif font-light normal-case">Magic.</span></h2>
+                </div>
+
+                <form id="contactForm" class="bg-black border border-zinc-900 p-8 md:p-12 rounded-none space-y-8 relative overflow-hidden" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <!-- PENTING: ganti YOUR_FORM_ID dengan ID dari https://formspree.io (gratis).
+                         Kalau belum daftar, tombol WhatsApp di bawah tetap berfungsi sebagai jalur kontak utama. -->
+                    <div class="grid md:grid-cols-2 gap-8 relative z-10">
+                        <div>
+                            <label for="cf-name" class="sr-only">Nama</label>
+                            <input id="cf-name" name="name" type="text" placeholder="Your name *" required class="w-full bg-transparent border-b border-zinc-800 focus:border-lime-400 outline-none px-0 py-4 text-white text-sm font-mono tracking-widest transition-colors" />
+                        </div>
+                        <div>
+                            <label for="cf-email" class="sr-only">Email</label>
+                            <input id="cf-email" name="email" type="email" placeholder="Your email *" required class="w-full bg-transparent border-b border-zinc-800 focus:border-lime-400 outline-none px-0 py-4 text-white text-sm font-mono tracking-widest transition-colors" />
+                        </div>
+                    </div>
+                    <div class="relative z-10">
+                        <label for="cf-message" class="sr-only">Detail proyek</label>
+                        <textarea id="cf-message" name="message" rows="4" placeholder="Project details..." required class="w-full bg-transparent border-b border-zinc-800 focus:border-lime-400 outline-none px-0 py-4 text-white text-sm font-mono tracking-widest transition-colors"></textarea>
+                    </div>
+                    <button type="submit" id="cf-submit" class="magnetic w-full py-6 bg-white text-black font-mono text-sm font-bold uppercase tracking-[0.2em] rounded-full hover:bg-lime-400 transition-colors relative z-10">
+                        Send Brief &rarr;
+                    </button>
+                    <p id="cf-status" class="hidden font-mono text-xs uppercase tracking-widest text-center relative z-10" role="status" aria-live="polite"></p>
+                </form>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <!-- Ganti nomor WhatsApp dengan milikmu (format: 628xxxxxxxxxx) -->
+                    <a href="https://wa.me/6287724977891?text=Hi%20Arrayan,%20saya%20tertarik%20diskusi%20proyek%20design." target="_blank" rel="noopener" class="magnetic px-8 py-4 border border-zinc-700 text-zinc-300 font-mono text-xs font-bold uppercase tracking-widest rounded-full hover:border-lime-400 hover:text-lime-400 transition-all flex items-center gap-3">
+                        <span>WhatsApp Direct</span><span>&nearr;</span>
+                    </a>
+                    <!-- Ganti href dengan file CV-mu (letakkan CV.pdf di folder yang sama) -->
+                    <a href="MuhammadArrayanCv.pdf" download class="magnetic px-8 py-4 border border-zinc-700 text-zinc-300 font-mono text-xs font-bold uppercase tracking-widest rounded-full hover:border-lime-400 hover:text-lime-400 transition-all flex items-center gap-3">
+                        <span>Download CV</span><span>&darr;</span>
+                    </a>
+                </div>
+
+                <p class="text-center font-mono text-xs text-zinc-500 uppercase tracking-widest">
+                    Response within 24 hours &bull; arrayanmuh212@gmail.com
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-10 px-6 md:px-12 border-t border-zinc-900 bg-[#08080a] flex flex-col md:flex-row items-center justify-between gap-6 font-mono text-xs text-zinc-500 uppercase tracking-widest relative z-10">
+        <p>&copy; 2026 Muhammad Arrayan</p>
+        <div class="flex gap-6">
+            <a href="https://www.instagram.com/arryn.exe?stkn=ZXhhMnJ6ZGo0eTVp" target="_blank" rel="noopener" class="hover:text-lime-400 transition-colors">Instagram &nearr;</a>
+        </div>
+        <p>Available for projects &mdash; Sept 2026</p>
+    </footer>
+
+    <!-- PROJECT CASE STUDY MODAL -->
+    <div id="caseModal" class="hidden fixed inset-0 z-[60] items-center justify-center p-4 md:p-8">
+        <div id="caseOverlay" class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+        <div class="relative bg-[#0c0c0e] border border-zinc-800 max-w-3xl w-full max-h-[85vh] overflow-y-auto no-scrollbar">
+            <button id="caseClose" class="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center border border-zinc-700 text-zinc-300 hover:border-lime-400 hover:text-lime-400 transition-colors font-mono" aria-label="Tutup">&times;</button>
+            <div class="aspect-[16/10] bg-zinc-900 overflow-hidden">
+                <img id="caseImg" src="" alt="" class="w-full h-full object-cover">
+            </div>
+            <div class="p-8 md:p-12 space-y-8">
+                <div class="flex flex-wrap items-center justify-between gap-4 border-b border-zinc-900 pb-6">
+                    <span id="caseCat" class="px-2 py-1 border border-zinc-800 font-mono text-[10px] text-lime-400 uppercase"></span>
+                    <span id="caseYear" class="text-xs font-mono text-zinc-600"></span>
+                </div>
+                <h3 id="caseTitle" class="font-display text-3xl md:text-5xl font-bold text-white uppercase tracking-tight"></h3>
+                <div class="grid sm:grid-cols-2 gap-6 font-mono text-xs uppercase tracking-widest">
+                    <div><span class="text-zinc-500 block mb-1">Client</span><span id="caseClient" class="text-white font-bold"></span></div>
+                    <div><span class="text-zinc-500 block mb-1">Role &amp; Tools</span><span id="caseRole" class="text-white font-bold"></span></div>
+                </div>
+                <div>
+                    <span class="font-mono text-xs text-lime-400 uppercase tracking-widest block mb-3">[ The Brief ]</span>
+                    <p id="caseBrief" class="text-zinc-300 leading-relaxed font-light"></p>
+                </div>
+                <div>
+                    <span class="font-mono text-xs text-lime-400 uppercase tracking-widest block mb-3">[ The Outcome ]</span>
+                    <p id="caseOutcome" class="text-zinc-300 leading-relaxed font-light"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            /* ============================================================
+               0. DATA PROYEK
+               — Ganti "img" dengan path file karya aslimu, contoh:
+                 img: "images/neon-pulse.webp"
+               — Sementara memakai placeholder foto agar layout terlihat jadi.
+                 Segera ganti: recruiter menilai dari karya, bukan placeholder.
+            ============================================================ */
+            const PROJECTS = [
+                {
+                    id: 'efwan', cat: 'Sports Graphic Design', year: '2026',
+                    title: 'Two Minds. One Grid – A Study in Speed & Precision',
+                    img: 'images/lewis.png',
+                    desc: 'A commercial Formula 1 poster featuring two iconic drivers side-by-side in a dynamic, high-contrast split-screen layout.',
+                    client: 'Editorial Sports Media / Fan Art', role: 'Sports Graphic Designer / Compositor',
+                    brief: 'Design promotional artwork highlighting the F1 rivalry, focusing on detailed helmet gear, thematic blue and red lighting, and the championship trophy at the center.',
+                    outcome: 'A balanced sports promo visual that emphasizes the high-stakes competitive atmosphere.'
+                },
+                {
+                    id: 'ramadhan', cat: 'Social Media Design & Branding', year: '2026',
+                    title: 'Ramadhan Kareem 1447 H – Yuwana Kingdom',
+                    img: 'images/puasa.png',
+                    desc: 'A festive holiday greeting graphic combining bold 3D typography with a classic-modern mosque architecture backdrop.',
+                    client: 'Yuwana Kingdom', role: 'Brand Designer & 3D Typographer',
+                    brief: 'Create a majestic and professional holiday greeting aligned with the Yuwana Kingdom brand identity for social media publishing.',
+                    outcome: 'An aesthetically pleasing digital greeting that effectively reinforces brand presence during key holidays.'
+                },
+                {
+                    id: 'duck', cat: 'Typography & Visual Art', year: '2026',
+                    title: 'Three Geese, Zero Plans',
+                    img: 'images/bebek.png',
+                    desc: 'An experimental poster combining natural landscape photography with expressive, relaxed typography exploration.',
+                    client: 'Personal Project', role: 'Graphic Designer & Photographer',
+                    brief: 'Showcase a visual contrast between the tranquility of nature and a modern structured text layout with subtle humor.',
+                    outcome: 'A unique visual poster suitable for art print exhibitions and typography portfolio showcases.'
+                },
+                {
+                    id: 'ferrari', cat: 'Sports Graphic Design', year: '2026',
+                    title: 'Charles Leclerc – New Era of Speed 2026',
+                    img: 'images/leklek.png',
+                    desc: 'A high-octane Formula 1 poster concept welcoming the 2026 technical regulation changes with Scuderia Ferrari and Charles Leclerc.',
+                    client: 'Personal Project / Sports Fan Art', role: 'Sports Graphic Designer & Layout Artist',
+                    brief: 'Create an impactful promotional poster featuring Charles Leclerc, combining action shots, helmet visuals, modern futuristic typography, and iconic Scuderia Ferrari branding.',
+                    outcome: 'A dynamic and sleek sports poster ready for editorial features, social media promotion, or high-quality art prints.'
+                },
+                {
+                    id: 'infografis', cat: 'Infographic & Visual Communication', year: '2025',
+                    title: 'Educating Wise AI Usage',
+                    img: 'images/Infografis.png',
+                    desc: 'An educational public infographic utilizing friendly 3D mascot illustrations to explain ethics and statistics around artificial intelligence usage.',
+                    client: 'Digital Literacy Campaign', role: 'Infographic Designer & Visual Communicator',
+                    brief: 'Present complex statistics and ethical guidelines for AI usage in a clean, easily digestible, and interactive visual format.',
+                    outcome: 'A highly structured and informative visual medium that makes digital ethics simple for readers to grasp.'
+                },
+                {
+                    id: 'max', cat: 'Digital Collage & Merchandise Design', year: '2024',
+                    title: 'Max Verstappen – Simply Lovely Graphic Posterr',
+                    img: 'images/MaxWhite.png',
+                    desc: 'A streetwear-style poster collage blending racing action photography into a halftone textured grid layout.',
+                    client: 'Personal Project', role: 'Digital Artist & Layout Designer',
+                    brief: 'Arrange championship moments into an edgy visual layout featuring red frame accents and a gold brush-style signature.',
+                    outcome: 'A modern collage graphic with high commercial value for merchandise, art prints, or digital media covers.'
+                }
+            ];
+
+            /* ============================================================
+               1. MOBILE MENU
+            ============================================================ */
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const iconOpen = document.getElementById('icon-open');
+            const iconClose = document.getElementById('icon-close');
+
+            function setMenu(open) {
+                mobileMenu.classList.toggle('hidden', !open);
+                iconOpen.classList.toggle('hidden', open);
+                iconClose.classList.toggle('hidden', !open);
+                menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            }
+            if (menuBtn) {
+                menuBtn.addEventListener('click', () => setMenu(mobileMenu.classList.contains('hidden')));
+            }
+            // FIX: menu menutup setelah link diklik
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => setMenu(false));
+            });
+
+            /* ============================================================
+               2. BACKGROUND COLOR ON SCROLL
+                 FIX: rootMargin -30% supaya transisi pas di tengah layar
+            ============================================================ */
+            const sections = document.querySelectorAll('.scroll-section');
+            const body = document.body;
+
+            const bgObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const bgColor = entry.target.getAttribute('data-bg');
+                        if (bgColor) body.style.backgroundColor = bgColor;
+                    }
+                });
+            }, { root: null, rootMargin: '-30% 0px -30% 0px', threshold: 0 });
+
+            sections.forEach(s => bgObserver.observe(s));
+
+            /* ============================================================
+               3. ACTIVE NAV HIGHLIGHT
+            ============================================================ */
+            const navLinks = document.querySelectorAll('.nav-link');
+            const navObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.id;
+                        navLinks.forEach(link => {
+                            link.classList.toggle('text-lime-400', link.dataset.target === id);
+                        });
+                    }
+                });
+            }, { threshold: 0.4 });
+
+            sections.forEach(s => navObserver.observe(s));
+
+            /* ============================================================
+               4. RENDER KARTU PROYEK (grup 1 + duplikat untuk loop)
+            ============================================================ */
+            const track = document.getElementById('projectsTrack');
+
+            function cardHTML(p) {
+                return `
+                <article class="project-card w-[320px] md:w-[450px] flex-shrink-0 border-r border-zinc-900 group cursor-pointer" data-id="${p.id}" tabindex="0" role="button" aria-label="Buka case study: ${p.title}">
+                    <div class="aspect-[4/5] bg-zinc-900 relative overflow-hidden">
+                        <img src="${p.img}" alt="${p.title}" loading="lazy" draggable="false"
+                             class="w-full h-full object-cover grayscale-[35%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out">
+                        <span class="absolute top-4 left-4 px-2 py-1 bg-black/70 border border-zinc-700 font-mono text-[10px] text-lime-400 uppercase tracking-widest">${p.cat}</span>
+                    </div>
+                    <div class="p-6 bg-black border-t border-zinc-900">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-mono text-zinc-600">${p.client}</span>
+                            <span class="text-xs font-mono text-zinc-600">${p.year}</span>
+                        </div>
+                        <h3 class="font-display text-2xl font-bold text-white uppercase mb-2">${p.title}</h3>
+                        <p class="text-zinc-500 font-light text-xs leading-relaxed">${p.desc}</p>
+                        <span class="inline-block mt-4 font-mono text-[10px] uppercase tracking-widest text-lime-400 group-hover:underline">View case study &rarr;</span>
+                    </div>
+                </article>`;
+            }
+
+            if (track) {
+                const group1 = `<div class="flex">${PROJECTS.map(cardHTML).join('')}</div>`;
+                // Duplikat untuk seamless loop — aria-hidden + non-interaktif
+                const group2 = `<div class="flex" aria-hidden="true">${PROJECTS.map(p => cardHTML(p).replaceAll('<article ', '<article tabindex="-1" ')).join('')}</div>`;
+                track.innerHTML = group1 + group2;
+            }
+
+            /* ============================================================
+               5. CASE STUDY MODAL
+            ============================================================ */
+            const caseModal = document.getElementById('caseModal');
+            let lastFocused = null;
+
+            function openCase(id, trigger) {
+                const p = PROJECTS.find(x => x.id === id);
+                if (!p) return;
+                lastFocused = trigger || null;
+                document.getElementById('caseImg').src = p.img;
+                document.getElementById('caseImg').alt = p.title;
+                document.getElementById('caseCat').textContent = p.cat;
+                document.getElementById('caseYear').textContent = p.year;
+                document.getElementById('caseTitle').textContent = p.title;
+                document.getElementById('caseClient').textContent = p.client;
+                document.getElementById('caseRole').textContent = p.role;
+                document.getElementById('caseBrief').textContent = p.brief;
+                document.getElementById('caseOutcome').textContent = p.outcome;
+                caseModal.classList.remove('hidden');
+                caseModal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+                document.getElementById('caseClose').focus();
+            }
+            function closeCase() {
+                caseModal.classList.add('hidden');
+                caseModal.classList.remove('flex');
+                document.body.style.overflow = '';
+                if (lastFocused) lastFocused.focus();
+            }
+            track.addEventListener('click', (e) => {
+                const card = e.target.closest('.project-card');
+                if (card && card.getAttribute('tabindex') !== '-1') openCase(card.dataset.id, card);
+            });
+            track.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    const card = e.target.closest('.project-card');
+                    if (card && card.getAttribute('tabindex') !== '-1') openCase(card.dataset.id, card);
+                }
+            });
+            document.getElementById('caseClose').addEventListener('click', closeCase);
+            document.getElementById('caseOverlay').addEventListener('click', closeCase);
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !caseModal.classList.contains('hidden')) closeCase();
+            });
+
+            /* ============================================================
+               6. PROJECTS SCROLLER — AUTO + MANUAL (DRAG/SWIPE)
+            ============================================================ */
+            const scroller = document.getElementById('projectsScroller');
+
+            if (scroller && track) {
+                const AUTO_SPEED = 0.5;      // px per frame
+                const RESUME_DELAY = 2000;   // FIX: lebih lama, menghormati momentum mobile
+
+                let halfWidth = 0;
+                let isPaused = false;
+                let resumeTimer = null;
+                let isDragging = false;
+                let startX = 0;
+                let startScrollLeft = 0;
+                let hasMoved = false;
+
+                function measure() {
+                    halfWidth = track.scrollWidth / 2;
+                    if (scroller.scrollLeft === 0 && halfWidth > 0) {
+                        scroller.scrollLeft = halfWidth;
+                    }
+                }
+                measure();
+                window.addEventListener('resize', measure);
+                window.addEventListener('load', measure);
+
+                function pause() {
+                    isPaused = true;
+                    if (resumeTimer) clearTimeout(resumeTimer);
+                }
+                function scheduleResume() {
+                    if (resumeTimer) clearTimeout(resumeTimer);
+                    resumeTimer = setTimeout(() => { isPaused = false; }, RESUME_DELAY);
+                }
+
+                scroller.addEventListener('mouseenter', pause);
+                scroller.addEventListener('mouseleave', () => { if (!isDragging) isPaused = false; });
+
+                scroller.addEventListener('mousedown', (e) => {
+                    isDragging = true;
+                    hasMoved = false;
+                    startX = e.pageX;
+                    startScrollLeft = scroller.scrollLeft;
+                    pause();
+                    scroller.style.cursor = 'grabbing';
+                });
+                window.addEventListener('mousemove', (e) => {
+                    if (!isDragging) return;
+                    e.preventDefault();
+                    const dx = e.pageX - startX;
+                    if (Math.abs(dx) > 3) hasMoved = true;
+                    scroller.scrollLeft = startScrollLeft - dx;
+                });
+                window.addEventListener('mouseup', () => {
+                    if (!isDragging) return;
+                    isDragging = false;
+                    scroller.style.cursor = '';
+                    scheduleResume();
+                });
+
+                scroller.addEventListener('touchstart', pause, { passive: true });
+                scroller.addEventListener('touchend', scheduleResume, { passive: true });
+                scroller.addEventListener('touchcancel', scheduleResume, { passive: true });
+
+                // Cegah klik/modal terbuka saat user baru saja drag
+                scroller.addEventListener('click', (e) => {
+                    if (hasMoved) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        hasMoved = false;
+                    }
+                }, true);
+
+                function loop() {
+                    if (!isPaused && halfWidth > 0) {
+                        scroller.scrollLeft += AUTO_SPEED;
+                        if (scroller.scrollLeft >= halfWidth * 2) {
+                            scroller.scrollLeft -= halfWidth;
+                        } else if (scroller.scrollLeft <= 0) {
+                            scroller.scrollLeft += halfWidth;
+                        }
+                    }
+                    requestAnimationFrame(loop);
+                }
+                loop();
+            }
+
+            /* ============================================================
+               7. MAGNETIC BUTTON
+            ============================================================ */
+            const magneticButtons = document.querySelectorAll('.magnetic');
+            const isTouch = window.matchMedia('(hover: none)').matches;
+
+            if (!isTouch) {
+                magneticButtons.forEach(btn => {
+                    btn.addEventListener('mousemove', (e) => {
+                        const rect = btn.getBoundingClientRect();
+                        const x = e.clientX - rect.left - rect.width / 2;
+                        const y = e.clientY - rect.top - rect.height / 2;
+                        btn.style.transform = `translate(${x * 0.15}px, ${y * 0.25}px)`;
+                    });
+                    btn.addEventListener('mouseleave', () => {
+                        btn.style.transform = 'translate(0, 0)';
+                    });
+                });
+            }
+
+            /* ============================================================
+               8. FORM KONTAK (Formspree via fetch)
+                 — Ganti YOUR_FORM_ID di atribut action form dengan ID
+                   gratis dari https://formspree.io
+                 — Selama ID belum diganti, form menampilkan pesan error
+                   yang jelas + user tetap bisa lewat WhatsApp/email.
+            ============================================================ */
+            const form = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('cf-submit');
+            const statusEl = document.getElementById('cf-status');
+
+            if (form) {
+                form.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    const action = form.getAttribute('action');
+                    statusEl.classList.remove('hidden', 'text-lime-400', 'text-red-400');
+
+                    if (action.includes('YOUR_FORM_ID')) {
+                        statusEl.textContent = 'Form belum diaktifkan — hubungi via WhatsApp atau email di bawah.';
+                        statusEl.classList.add('text-red-400');
+                        return;
+                    }
+
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Sending...';
+                    try {
+                        const res = await fetch(action, {
+                            method: 'POST',
+                            body: new FormData(form),
+                            headers: { 'Accept': 'application/json' }
+                        });
+                        if (res.ok) {
+                            statusEl.textContent = 'Brief sent — I will reply within 24 hours.';
+                            statusEl.classList.add('text-lime-400');
+                            form.reset();
+                        } else {
+                            throw new Error();
+                        }
+                    } catch {
+                        statusEl.textContent = 'Failed to send — please try WhatsApp or email instead.';
+                        statusEl.classList.add('text-red-400');
+                    } finally {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Send Brief →';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
